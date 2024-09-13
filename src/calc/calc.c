@@ -18,7 +18,6 @@ float standard_deviation(int numSamples, float samples[])
     float avrg = average(numSamples, samples);
     float sum = 0;
     float temp = 0;
-    float deviation = 0;
 
     for (size_t i = 0; i < numSamples; i++)
     {
@@ -26,7 +25,5 @@ float standard_deviation(int numSamples, float samples[])
         sum += pow(temp, 2);
     }
 
-    deviation = sqrt((sum / (numSamples - 1)));
-    
-    return deviation;
+    return sqrt((sum / (numSamples - 1)));
 }
