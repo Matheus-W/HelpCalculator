@@ -3,6 +3,17 @@
 
 #define DIGITAL_INSTRUMENT 12.0;
 
+typedef struct 
+{
+    float Average;
+    float StandartDeviation;
+    float CombinedUncertainty;
+    float InstrumentResolution;
+    float ExpandedUncertainty;
+    float StudentCoefficient;
+} CalcSolution;
+
+
 float average(int length, float array[]);
 
 float standard_deviation(int numSamples, float samples[]);
@@ -13,6 +24,6 @@ float resolution_digital_instrument_uncertainty(float resolution);
 
 float expanded_uncertainty(float combined, float instrument, float studentCoefficient);
 
-void get_value_uncertainty(int numSamples, float samples[], float instResolution, float studentCoefficient);
+CalcSolution get_value_uncertainty(int numSamples, float samples[], float instResolution, float studentCoefficient);
 
 #endif
