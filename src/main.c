@@ -14,5 +14,7 @@ int main()
     printf("Media %f\n", av);
     printf("Desvio padrao %f\n", deviation);
 
+    get_value_uncertainty(3, test, 0.1, 2.13);
+
     return 0;
 }
